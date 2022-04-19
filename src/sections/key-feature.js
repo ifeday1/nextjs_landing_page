@@ -15,7 +15,7 @@ const data = [
     altText: 'Fast Performance',
     title: 'Fast Performance',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'The product is tested and trusted with high perfomance.',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     altText: 'Partnership deal',
     title: 'Partnership deal',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'For partnership you can reach out to us.',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     altText: 'Pro Subscription',
     title: 'Pro Subscription',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'We have amazing and affordable subscription plans that will blow you mind.',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const data = [
     altText: 'Customer Support',
     title: 'Customer Support',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'You can contact our customer serive if any problem.',
   },
 ];
 
@@ -52,7 +52,17 @@ export default function KeyFeature() {
    title="meet the feature of our product"
    />
   
-  
+   <Grid sx={styles.grid}>
+   {data.map((item) => (
+     <FeatureCardColumn 
+     key={item.id}
+     src={item.imgSrc}
+     alt={item.altText}
+     title={item.title}
+     text={item.text}
+     />
+   ))}
+   </Grid>
    </Container>
    </section>
   );

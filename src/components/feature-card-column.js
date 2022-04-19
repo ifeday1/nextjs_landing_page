@@ -8,8 +8,12 @@ export default function FeatureCardColumn({
   text,
 }) {
   return (
-    <h1>FeatureCardColumn</h1>
-  );
+    <Box sx={styles.card}>
+    <Image src={src} altText='img' sx={styles.img} />
+    <Heading sx={styles.wrapper.title}>{title}</Heading>
+    <Text sx={styles.wrapper.text}>{text}</Text>
+    </Box>
+    );
 }
 
 const styles = {
